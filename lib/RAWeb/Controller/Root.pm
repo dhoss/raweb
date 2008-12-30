@@ -29,8 +29,6 @@ RAWeb::Controller::Root - Root Controller for RAWeb
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    # Hello World
-    $c->response->body( $c->welcome_message );
 }
 
 sub default :Path {
@@ -50,7 +48,7 @@ sub end : ActionClass('RenderView') {}
 
 =head1 AUTHOR
 
-Devin,,,
+Devin Austin
 
 =head1 LICENSE
 

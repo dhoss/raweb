@@ -2,7 +2,7 @@ package RAWeb::Controller::Messages;
 
 use strict;
 use warnings;
-use parent 'Catalyst::Controller';
+use parent 'Catalyst::Controller::HTML::FormFu';
 
 =head1 NAME
 
@@ -24,13 +24,13 @@ Catalyst Controller.
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->response->body('Matched RAWeb::Controller::Messages in Messages.');
+    $c->stash->{template} = "messages/main.mas";
 }
 
 
 =head1 AUTHOR
 
-Devin,,,
+Devin Austin
 
 =head1 LICENSE
 
