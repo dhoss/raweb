@@ -1,0 +1,8 @@
+<html>
+<head>
+<title>[% template.title || title || "RA Front Desk Communication Log" %]</title>
+</head>
+<body>
+[% content %]
+</body>
+</html>
