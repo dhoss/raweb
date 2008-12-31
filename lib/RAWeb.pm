@@ -24,8 +24,6 @@ use Catalyst qw/
   Authentication
   Authorization::Roles
 
-  Cache
-
   Session
   Session::Store::FastMmap
   Session::State::Cookie

@@ -1,0 +1,63 @@
+---
+# indicator is the field that is used to test for form submission
+indicator: submit
+# Start listing the form elements
+elements:
+    - type: Text
+      name: name
+      label: Your Name
+      attributes:
+        title: Enter your name here
+      container_tag: div
+     
+      constraints:
+        type: Callback
+
+    
+    - type: Password
+      name: password
+      label: Password
+      attributes:
+        title: Enter your password here
+      container_tag: div
+     
+    
+    - type: Password
+      name: password2
+      label: Password (Again)
+      attributes:
+        title: Enter your password again for confirmation
+      constraints:
+         type: Equal
+         others: password
+      container_tag: div
+         
+        
+    - type: Text
+      name: email
+      label: Email
+      attributes:
+          title: Enter a valid email for confirmation
+      constraints:
+          type: Callback
+          message: 'This email address is already in use'
+          #- Email
+      container_tag: div
+    
+
+    - type: Submit
+      name: submit
+      value: Sign up!  
+      container_tag: div
+      
+      
+# Globally ensure that each field only specified one value
+constraints:
+    # The user cannot leave any fields blank
+    - Required    
+    
+filter:
+     # Remove whitespace at both ends
+     - TrimEdges
+     # Escape HTML characters for safety
+     - HTMLEscape    

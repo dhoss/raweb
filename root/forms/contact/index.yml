@@ -1,0 +1,35 @@
+---
+indicator: submit
+
+elements:
+  - type: Text
+    name: user
+    label: Your name
+    container_tag: div
+    constraints:
+      Required
+  
+  - type: Text
+    name: email
+    label: "Your email (required)"
+    container_tag: div
+    constraints:
+      Email
+    
+  - type: Textarea
+    name: comments
+    label: Comments
+    container_tag: div
+    constraints:
+      Required
+      
+  - type: Submit
+    name: submit
+    container_tag: div
+    value: Send
+     
+constraints:
+  SingleValue
+  
+filters:
+  HTMLScrubber

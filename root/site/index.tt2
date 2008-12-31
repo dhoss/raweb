@@ -1,2 +1,4 @@
 <h2>Front Desk Communication Log</h2>
-
+[% INCLUDE "login.tt2" %]
+<div> or <a href="[% c.uri_for('/signup') %]">sign up</a></div>
+<div> <b>or</b> you may simply <a href="[% c.uri_for('/contact') %]">contact us</a></div>

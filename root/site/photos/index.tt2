@@ -1,0 +1,22 @@
+[% USE table (photos, rows=3) %]
+<h2>Puppy Photos</h2>
+
+<div id="puppy-list">
+<table>
+[% FOREACH column = table.cols %]
+<tr>
+[% FOREACH photo = column %]
+<td>
+  [% IF photo %]
+  <a href="[% c.uri_for("/photo/$photo.photoid/view") %]">
+     <img src="[% c.uri_for("/photo/$photo.photoid/thumbnail")%]" />
+  </a>
+  [% ELSE %]
+  <img src="[% c.uri_for("/static/photos/blank.gif")%]" width="150" height="100"/>
+  [% END %]
+</td>
+[% END %]
+</tr>
+[% END %]
+<table>
+</div>

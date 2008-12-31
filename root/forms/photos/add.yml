@@ -1,0 +1,28 @@
+ ---
+indicator: submit
+
+elements:
+  - type: Text
+    name: photo_name
+    label: Name this photo
+    container_tag: div
+        
+  - type: File
+    name: photo
+    label: Your photo
+    container_tag: div
+      
+  - type: Textarea
+    name: caption
+    label: Photo caption
+    container_tag: div
+  
+  - type: Submit
+    name: submit
+    value: Upload!
+      
+constraints:
+  SingleValue
+  
+filters:
+  HTMLScrubber

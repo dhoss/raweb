@@ -1,0 +1,66 @@
+---
+indicator: submit
+elements:
+
+    - type: Text
+      name: name
+      label: Your Name
+      attributes:
+        title: Enter your name her
+      container_tag: div
+    
+    - type: Password
+      name: password
+      label: Old password
+      attributes: 
+        title: Enter your old password
+      constraints:
+        - Required
+      container_tag: div
+      
+    - type: Password
+      name: newpassword
+      label: New Password
+      attributes:
+        title: Enter your new password here
+      container_tag: div
+      
+    - type: Password
+      name: newpassword2
+      label: New Password Again
+      attributes:
+       title: Enter your new password here
+      constraints:
+        type: Equal
+        others: newpassword
+        
+      container_tag: div
+     
+         
+        
+    - type: Text
+      name: email
+      label: Email
+      attributes:
+          title: Your email
+      constraints:
+          - Email
+      container_tag: div
+    
+      
+    - type: Textarea
+      name: about
+      label: About You
+      container_tag: div
+          
+    - type: Submit
+      name: submit
+      value: Update!
+      container_tag: div
+      
+      
+      
+    
+filter:
+     - TrimEdges
+     - HTMLEscape    

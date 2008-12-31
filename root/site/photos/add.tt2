@@ -1,0 +1,10 @@
+<h2>Upload your photos</h2>
+[% UNLESS form.submitted_and_valid %]
+[% form %]
+
+[% ELSE %]
+
+<p>Success!</p>
+<p>Here's your image: <img src="[% c.uri_for("/photo/$photo.photoid/thumbnail") %]" />
+
+[% END %]

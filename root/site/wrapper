@@ -3,6 +3,9 @@
 <title>[% template.title || title || "RA Front Desk Communication Log" %]</title>
 </head>
 <body>
+<span class="message">[% status_msg %]</span>
+<span class="error">[% error_msg %]</span>
+
 [% content %]
 </body>
 </html>

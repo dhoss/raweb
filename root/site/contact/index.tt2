@@ -1,0 +1,4 @@
+<h2>Send us your comments!</h2>
+[% UNLESS c.rsubmitted_and_valid %]
+[% form %]
+[% END %]
