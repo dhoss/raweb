@@ -8,6 +8,16 @@ elements:
     container_tag: div
     constraints:
       Required
+
+  - type: Select
+    name: to
+    label: To
+    options:
+    - [ 'Q', 'manager@edrtrust.com' ]
+    - [ 'Laura', 'marketing@edrtrust.com' ]
+    - [ 'Dan', 'dunno@edrtrust.com' ]
+    - [ 'Justin', 'rlcdenver@edrtrust.com' ]
+    
   
   - type: Text
     name: email
