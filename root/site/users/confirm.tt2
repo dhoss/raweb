@@ -1,0 +1,8 @@
+[% META title='Confirmed!' %]
+[% IF confirmed %]
+<p>Congratulations! You've confirmed your account. </p>
+[%# THIS REALLY NEEDS TO BE FIXED! -%]
+<p>Click <a href="[% c.uri_for( "/login" )  %]">here</a> to go to login.</p>
+[% ELSE %]
+<p>Not confirmed!</p>
+[% END %]

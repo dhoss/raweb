@@ -1,0 +1,5 @@
+[% SET no_wrapper = 1 %]
+Thanks for signing up at BoyosPlace.com.
+
+Copy and paste this URL into your browser's URL bar (or click on the link if possible)
+to confirm your account: http://www.boyosplace.com/users/confirm/[% confirmation_key %]

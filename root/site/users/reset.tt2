@@ -1,0 +1,5 @@
+[% META title='Reset password' %]
+<div><strong>Enter your email address and we'll send you your new password.</strong></div>
+<form method="post" action="[% c.uri_for('/reset_password') %]">
+<label>Your email:</label><input type="text" name="email" /><input type="submit" name="submit" value="Reset my password!" />
+</form>

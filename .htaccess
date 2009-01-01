@@ -1,0 +1,7 @@
+Options +ExecCGI
+AddHandler fastcgi-script .fcgi
+
+RewriteEngine On
+RewriteRule ^(CVA/script/dispatch\.fcgi/.*)$ - [L]
+RewriteRule ^(.*)$ CVA/script/dispatch.fcgi/$1 [PT,L]
+   

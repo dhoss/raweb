@@ -1,0 +1,18 @@
+[% META title="User Profile" %]
+[% IF c.user.name == user.name %]
+<div>(You are viewing your own profile)</div>
+[% END %]
+<div id="user-welcome"><strong>[% user.name %]'s profile</strong></div>
+<div id="user-last-login">[% user.name %] was last here: [% user.last_here.mdy %]</div>
+<div id="user-since">...and has been a user since: [% user.created.mdy %]</div>
+<div id="contact-options">
+Contact [% user.name %]:
+<ul>
+<li><a href="[% c.uri_for("/contact/$user.userid/email" ) %]">contact <strong>[% user.name %]</strong></a> </li><!--
+<li>send a message</li>
+<li>give them a comment</li>-->
+</ul>
+</div>
+<div id="user-about">
+[% user.about %]
+</div>

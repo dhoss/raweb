@@ -1,0 +1,10 @@
+[% META title='Sign up!' %]
+[% IF c.user_exists %]
+<div>You're already signed up! Click <a href='[% c.uri_for("/user/$c.user.userid/profile") %]'>here</a> to go to your profile.</div>
+[% ELSE %]
+[% UNLESS form.submitted_and_valid %]
+<p>All fields are required.</p>
+[% form %]
+[% END %]
+[% END %]
+

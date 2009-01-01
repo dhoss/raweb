@@ -1,0 +1,12 @@
+[% META title="User Profile" %]
+
+
+<div id="user-welcome">Welcome, <strong>[% user.name %]</strong></div>
+<div id="user-last-login">You were last here: [% user.last_here.mdy %]</div>
+<div id="user-since">...and you've been a user since: [% user.created.mdy %]</div>
+<div id="user-edit-options">
+<a href="[% c.uri_for( c.controller('users').action_for('edit_profile'), c.req.captures ) %]">edit your profile</a>
+[% IF c.check_user_roles('admin') %]
+<a href="[% c.uri_for( "/photo", "add" ) %]">upload photos</a>
+[% END %]
+</div>

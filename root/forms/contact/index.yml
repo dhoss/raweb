@@ -13,10 +13,10 @@ elements:
     name: to
     label: To
     options:
-    - [ 'Q', 'manager@edrtrust.com' ]
-    - [ 'Laura', 'marketing@edrtrust.com' ]
-    - [ 'Dan', 'dunno@edrtrust.com' ]
-    - [ 'Justin', 'rlcdenver@edrtrust.com' ]
+    - [ "manager@edrtrust.com", "Q"]
+    - [ "rlcdenver@edrtrust.com", "Justin" ]
+    - [ "devin.austin@gmail.com", "Devin" ]
+
     
   
   - type: Text
